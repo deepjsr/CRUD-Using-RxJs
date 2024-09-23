@@ -1,0 +1,8 @@
+.container {
+  position: absolute;
+  top: 30%;
+}
+li {
+  background-color: #222230;
+  color: aliceblue;
+}

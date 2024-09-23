@@ -1,0 +1,21 @@
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div *ngFor="let product_data of all_product_data">
+    <div class="col">
+      <div class="card h-100">
+        <img src={{product_data.uploadPhoto}} class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{product}}</h5>
+          <p class="card-text">Nothing else</p>
+          <p class="card-text">MRP:<del>{{product_data.mrp}}</del></p>
+          <p class="card-text">DP:<strong>{{product_data.dp}}</strong></p>
+          <div class="card-footer bg-transparent d-flex border-success">
+            <button class="btn btn-dark ms-auto me-2">buy now</button>
+            <button class="btn btn-warning" (click)="onAddToCart(product_data)">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

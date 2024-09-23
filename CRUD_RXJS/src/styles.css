@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* Change the background color of the entire app */
+body {
+  background-color: #192733; /* Use any color code you prefer */
+}
+
+/* Optionally, set text color for better readability */
+h1,
+h2,
+h3,
+p {
+  color: #333; /* You can adjust this to your liking */
+}

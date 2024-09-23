@@ -1,0 +1,48 @@
+<br>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr class="table-dark">
+      <th scope=" col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Email</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Role</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user_data of all_user_data; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{user_data.name}}</td>
+      <td>{{user_data.mobile}}</td>
+      <td>{{user_data.email}}</td>
+      <td>{{user_data.dob}}</td>
+      <td>{{user_data.role}}</td>
+      <td>
+        <span class="sim-pointer-edit" data-bs-toggle="modal" data-bs-target="#addEditUserModal">
+          <fa-icon [icon]="editIcon"></fa-icon>
+        </span>
+        &nbsp; &nbsp;
+        <span class="sim-pointer-del" (click)="deleteUser(user_data.id)" aria-hidden="true">
+          <fa-icon [icon]="delIcon"></fa-icon>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="container">
+  <div class="card  bg-dark " style="width: 15rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-success">No. of Admin :-<span class=" bg-body-secondary border">{{adminCount |
+          async}}</span>
+      </li>
+      <li class="list-group-item text-success">No. of User :-<span class="bg-body-secondary border">{{userCount |
+          async}}</span>
+      </li>
+      <li class="list-group-item text-success">Total :-<span class="bg-body-secondary border">{{totalCount |
+          async}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

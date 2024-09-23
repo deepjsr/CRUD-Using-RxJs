@@ -1,0 +1,13 @@
+.container {
+  position: absolute;
+  left: 35%;
+  right: 45%;
+}
+.sim-pointer-del {
+  color: #ce5626;
+  cursor: pointer;
+}
+.sim-pointer-edit {
+  color: #5826ce;
+  cursor: pointer;
+}

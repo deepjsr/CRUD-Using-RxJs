@@ -1,0 +1,98 @@
+<br>
+<div class="form-row container">
+  <div class="col-md-6 offset-md-3">
+    <div class="card bg-dark">
+      <div class="card-header text-warning">
+        Login
+      </div>
+      <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && OnsubmitSignIn()" novalidate>
+        <ul class="list-group list-group-flush ">
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="mail">Email</label>
+              <input type="mail" class="form-control" name="userEmail" #userEmail="ngModel"
+                [(ngModel)]="signInFormValue.userEmail">
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="userPassword" #userEmail="ngModel"
+                [(ngModel)]="signInFormValue.password" minlength="6" togglPassword>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <button class="btn btn-primary">Login</button>
+            </div>
+          </li>
+          <p class="text-center text-white">Don't have an accoount Click here to <a class="sim-pointer"
+              (click)="register()">Sign
+              Up</a>
+          </p>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+
+<br>
+<div *ngIf="!signIn" class="form-row container">
+  <div class="col-md-6 offset-md-3">
+    <div class="card bg-dark">
+      <div class="card-header text-warning fw-bolder">
+        Sign Up
+      </div>
+      <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && OnsubmitSignIn()" novalidate>
+        <ul class="list-group list-group-flush ">
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="mail">Email</label>
+              <input type="mail" class="form-control" name="userEmail" #userEmail="ngModel"
+                [(ngModel)]="signInFormValue.userEmail">
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="mail">Enter Email Again</label>
+              <input type="mail" class="form-control" name="userEmail" #userEmail="ngModel"
+                [(ngModel)]="signInFormValue.userEmail">
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="userPassword" #userEmail="ngModel"
+                [(ngModel)]="signInFormValue.password" minlength="6" togglPassword>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="password">Mobile</label>
+              <input type="password" class="form-control" name="userPassword" #userMobile="ngModel"
+                [(ngModel)]="signInFormValue.Mobile" minlength="6" togglPassword>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <label for="password">DOB</label>
+              <input type="password" class="form-control" name="userPassword" #userDob="ngModel"
+                [(ngModel)]="signInFormValue.DOB" minlength="6" togglPassword>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group">
+              <button class="btn btn-primary">Login</button>
+            </div>
+          </li>
+          <p class="sim-pointer text-center text-white">Already have an accoount Click here to <a class="sim-pointer"
+              (click)="register()">Log
+              In</a>
+          </p>
+        </ul>
+      </form>
+    </div>
+  </div>
+</div>
+<br>

@@ -1,0 +1,5 @@
+<app-header></app-header>
+<main class="container" [ngStyle]="{'min-height.px': footerMaxHeight}">
+  <router-outlet (activate)="active()" />
+</main>
+<app-footer></app-footer>
